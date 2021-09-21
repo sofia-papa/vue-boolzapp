@@ -55,14 +55,15 @@
 
                 <!--Lista contatti-->
                 <div class="contacts">
-                    <div class="contact">
+                    <div v-for="(contact, index) in contacts" :class="(index === avatarActive) ? 'contact active' : 'contact'"
+                     @click="showConversation(index)">
                         <div class="contact-logo">
-                            <img src="img/avatar_1.jpg" alt="Michele">
+                            <img src="" alt="">
                         </div>
                         <div class="contact-info">
                             <h3>
-                                <span class="contact-name">Michele</span>
-                                <span class="time f-right">12:00</span>
+                                <span class="contact-name">{{ contact.name }}</span>
+                                <span class="time f-right"></span>
                             </h3>
                             <small>Ultimo messaggio inviato</small>
                         </div>
@@ -90,13 +91,22 @@
 
                 <div class="right-messages-container">
                     <div class="right-messages">
+                        <div v-for="(text, indice) in contacts[avatarActive].messages" 
+                        :class="{ messagesSent: (text.status == 'sent'), messagesReceived: (text.status == 'received')} ">
+                        <span>{{ text.text }} </span>
+                        <span class="messagesDate">{{ text.date }}</span>
+                    </div>
+
                 </div>
 
+                <!--Box dove 'scrivi un messaggio'-->
                 <div class="right-footer">
                     <div class="right-footer-icon f-left">
                         <i class="far fa-smile"></i>
                     </div>
-                    <input class="new-message-inputs" placeholder="Scrivi un messaggio">
+                    <input class="new-message-inputs" placeholder="Scrivi un messaggio" v-model="newMessage"
+                     @keyup.enter="addElement()">
+                     <button @click="addElement"></button>
                     <div class="right-footer-icon f-right">
                         <i class="fa fa-microphone"></i>
                     </div>

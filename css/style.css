@@ -33,6 +33,40 @@ body {
     height: 100%;
 }
 
+.messagesDate {
+    font-size: 0.5rem;
+    content: "";
+    clear: both;
+    display: table;
+    float: right;
+}
+
+.messagesReceived{
+    background-color: whitesmoke;
+    height: 30px;
+    width: 50%;
+    content: "";
+    clear: both;
+    display: table;
+    float: left;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.messagesSent{
+    background-color: green;
+    height: 30px;
+    width: 50%;
+    content: "";
+    clear: both;
+    display: table;
+    float: right;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
 .left {
     width: 35%;
     border-right: 1px solid #D6D6D6;
@@ -46,6 +80,17 @@ body {
     width: 100%;
     height: 70px;
     background: #EAEAEA;
+}
+
+.header-left .header-left-logo,
+.header-left .header-left-icons,
+.header-right .header-right-logo,
+.header-right .header-right-icons {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
 }
 
 .header-left .header-left-logo h3 {
@@ -133,6 +178,18 @@ body {
     background: #FAFAFA;
 }
 
+.left-searchbar .left-searchbar-input {
+    float: right;
+    width: calc(85% - 7px);
+    height: 36px;
+    margin: 7px 7px 7px 0;
+    padding: 0 10px;
+    border: 1px solid #F5F5F5;
+    border-left: 0;
+    border-radius: 0px 3px 3px 0;
+    color: #B6B9BB;
+}
+
 .left-searchbar .search-label {
     display: inline-block;
     width: calc(15% - 7px);
@@ -172,8 +229,63 @@ body {
     overflow: hidden;
 }
 
-.left .contacts .contact .contact-logo img {
-    width: 100%;
-    height: 100%;
+.right {
+    position: relative;
 }
 
+.right .right-messages-container {
+    width: 100%;
+    height: calc(100% - 70px - 70px);
+}
+
+.right .right-messages {
+    height: 100%;
+    width: 100%;
+    padding: 5% 10%;
+}
+
+.right .right-messages .message {
+    position: relative;
+    margin: 5px 0;
+    padding: 15px 15px 20px 15px;
+    min-width: 40%;
+    max-width: 60%;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.right .right-messages .message .message-options {
+    display: none;
+    cursor: pointer;
+}
+
+.right .right-messages .message .message-options-panel {
+    position: absolute;
+    right: 0;
+    bottom: -75px;
+    width: 150px;
+    height: 80px;
+    background: white;
+}
+
+.right .right-messages .message .message-options-panel>div {
+    cursor: pointer;
+    width: 100%;
+    height: 50%;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.right .right-messages .message .message-time {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+}
+
+.right .right-footer {
+    width: 100%;
+    height: 70px;
+}

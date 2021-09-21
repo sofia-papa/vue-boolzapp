@@ -2,11 +2,12 @@
 let app = new Vue ({
          el: "#app",
          data: {
+             newMessage: '',
 
          
 
 
-contacts: [
+  contacts: [
     {
         name: 'Michele',
         avatar: '_1',
@@ -88,10 +89,30 @@ contacts: [
                 date: '10/01/2020 15:50:00',
                 text: 'Si, ma preferirei andare al cinema',
                 status: 'received'
-            }
+            },
+        
         ],
     },
 ],
-}
+
+ avatarActive: 0,
+
+},
+mounted (){
+
+},
+methods: {
+    showConversation(index) {
+        this.avatarActive = index;
+    },
+
+    addElement: function () {
+        this.push(this.newMessage);
+        this.newMessage = "";
+    },
+     onkeyupevent : function (event) {
+            this.aggiungiElemento();
+        },
+  }
 
 });
