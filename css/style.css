@@ -217,6 +217,14 @@ body {
     border-bottom: 1px solid #F5F5F5;
 }
 
+.contact-name{
+    font-size: 1.2rem;
+}
+
+small{
+    font-size: 0.8rem;
+}
+
 .left .contacts .contact:hover {
     background: #f4f5f5;
 }

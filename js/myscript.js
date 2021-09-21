@@ -3,7 +3,6 @@ let app = new Vue ({
     el: "#app",
     data: {
         newMessage: '',
-        filterName: '',
 
         contacts: [
             {
@@ -97,11 +96,11 @@ let app = new Vue ({
 
     },
 
-    computed: {
+  /*   computed: {
         filterProductsByName: function(){
         return this.contacts.filter(contact => !contact.filterName.indexOf(this.filterName))
         },
-    },
+    }, */
 
     mounted (){
 
@@ -118,7 +117,7 @@ let app = new Vue ({
                 text: this.newMessage,
                 status: 'sent'
             };
-            
+
             currentContact.messages.push(newMessageObject);
             this.newMessage = "";
             console.log(currentContact)
