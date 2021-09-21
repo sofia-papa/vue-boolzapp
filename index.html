@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Importo Bootstrap v5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Importo lo stylesheet specifico -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Importo VueJs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Vue Boolzapp</title>
+</head>
+<body>
+    <div id="app" class="container">
+
+            <!--Parte a sinistra-->
+            <div class="left">
+                <div class="header-left">
+                    <div class="header-left-logo">
+                        <img src="img/avatar_io.jpg" alt="Nome Utente">
+                        <span>Nome Utente</span>
+                    </div>
+                    <div class="header-left-icons">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
+                <!-- Ricevi notifiche di nuovi messaggi-->
+                <div class="left-disclaimer">
+                    <div class="left-disclaimer-logo">
+                        <i class="fa fa-bell-slash"></i>
+                    </div>
+                    <div class="left-disclaimer-text">
+                        <h3>Ricevi notifiche di nuovi messaggi</h3>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+
+                <div class="left-searchbar">
+                    <label class="search-label" for="search">
+                        <i class="fa fa-search" ></i>
+                    </label>
+                    <input id="contacts-filter" class="left-searchbar-input" 
+                          placeholder="Cerca o inizia una nuova chat" name="search">
+                </div>
+
+                <!--Lista contatti-->
+                <div class="contacts">
+                    <div class="contact">
+                        <div class="contact-logo">
+                            <img src="img/avatar_1.jpg" alt="Michele">
+                        </div>
+                        <div class="contact-info">
+                            <h3>
+                                <span class="contact-name">Michele</span>
+                                <span class="time f-right">12:00</span>
+                            </h3>
+                            <small>Ultimo messaggio inviato</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!--Parte a destra-->
+            <div class="right">
+                <div class="header-right">
+                    <div class="header-right-logo">
+                        <img src="img/avatar_1.jpg" alt="">
+                        <div>
+                            <span id="header-right-contact-name">Michele</span>
+                            <br>
+                            <small class="time">Ultimo accesso oggi alle 12:00</small>
+                        </div>
+                    </div>
+                    <div class="header-right-icons">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
+                <div class="right-messages-container">
+                    <div class="right-messages">
+                </div>
+
+                <div class="right-footer">
+                    <div class="right-footer-icon f-left">
+                        <i class="far fa-smile"></i>
+                    </div>
+                    <input class="new-message-inputs" placeholder="Scrivi un messaggio">
+                    <div class="right-footer-icon f-right">
+                        <i class="fa fa-microphone"></i>
+                    </div>
+                </div>
+            </div>
+    
+    <script type="text/javascript" src="js/myscript.js">
+    </script>
+</body>
+</html>
