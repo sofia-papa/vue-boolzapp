@@ -250,6 +250,7 @@ small{
     height: 100%;
     width: 100%;
     padding: 5% 10%;
+    overflow-y: scroll;
 }
 
 .right .right-messages .message {

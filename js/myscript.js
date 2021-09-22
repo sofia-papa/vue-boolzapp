@@ -3,7 +3,8 @@ let app = new Vue ({
     el: "#app",
     data: {
         newMessage: '',
-
+        searchValue: '',
+        
         contacts: [
             {
                 name: 'Michele',
@@ -96,6 +97,21 @@ let app = new Vue ({
 
     },
 
+    computed: {
+        filteredName() {
+          let nameSearch = this.contacts
+          
+          // Process search input
+          if (this.searchValue != '' && this.searchValue) {
+              nameSearch = nameSearch.filter((item) => {
+                return item.name
+                  .toUpperCase()
+                  .includes(this.searchValue.toUpperCase())
+              })
+            }
+        }
+    },
+
   /*   computed: {
         filterProductsByName: function(){
         return this.contacts.filter(contact => !contact.filterName.indexOf(this.filterName))
@@ -126,6 +142,9 @@ let app = new Vue ({
         onkeyupevent : function (event) {
                 this.aggiungiElemento();
             },
-    }
+
+            
+                
+    },
 
 });
